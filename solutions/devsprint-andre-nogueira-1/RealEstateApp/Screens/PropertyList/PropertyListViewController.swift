@@ -35,8 +35,8 @@ class PropertyListViewController: UIViewController {
 
         self.view.backgroundColor = .white
 
-        fetchProperties()
         setButtonItem()
+        viewModel.fetchListProperty()
         self.addLoadingView(with: "Searching for listings...")
     }
 
@@ -45,7 +45,6 @@ class PropertyListViewController: UIViewController {
     }
     
     private func configureViewModel() {
-        viewModel.fetchListProperty()
         viewModel.propertyBind.bind = { result in
             guard let result = result else { return }
             

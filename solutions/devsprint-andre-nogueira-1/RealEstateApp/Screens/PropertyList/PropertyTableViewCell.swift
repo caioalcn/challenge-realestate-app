@@ -104,11 +104,19 @@ final class PropertyTableViewCell: UITableViewCell {
             bottomAnchor.constraint(equalTo: descriptionAddress.bottomAnchor, constant: 10)
         ])
     }
-    
+
     func setup(property: Property) {
-        adDescriptionLabel.text = "R$ \(property.pricingInfos?.price ?? "")"
-        condominium.text = "Condomínio R$ \(property.pricingInfos?.monthlyCondoFee ?? "") IPTU R$ \(property.pricingInfos?.yearlyIptu ?? "")"
-        characteristics.text = "\(property.usableAreas ?? 0) m² \(property.bedrooms ?? 0) quartos \(property.bathrooms ?? 0) banheiros \(property.parkingSpaces ?? 0) vaga"
-        descriptionAddress.text = "\(property.address?.neighborhood ?? "")"
+        setData(price: property.pricingInfos?.price ?? "", condominiumPrice: property.pricingInfos?.monthlyCondoFee ?? "", iptu: property.pricingInfos?.yearlyIptu ?? "", size: property.usableAreas ?? 0, bedrooms: property.bedrooms ?? 0, bathrooms: property.bathrooms ?? 0, park: property.parkingSpaces ?? 0, address: property.address?.neighborhood ?? "")
+    }
+    
+    func setup(favorite: Favorites) {
+        setData(price: favorite.pricingInfos?.price ?? "", condominiumPrice: favorite.pricingInfos?.monthlyCondoFee ?? "", iptu: favorite.pricingInfos?.yearlyIptu ?? "", size: favorite.usableAreas ?? 0, bedrooms: favorite.bedrooms ?? 0, bathrooms: favorite.bathrooms ?? 0, park: favorite.parkingSpaces ?? 0, address: favorite.address.neighborhood ?? "")
+    }
+    
+    private func setData(price: String, condominiumPrice: String, iptu: String, size: Int, bedrooms: Int, bathrooms: Int, park: Int, address: String) {
+        adDescriptionLabel.text = "R$ \(price)"
+        condominium.text = "Condomínio R$ \(condominiumPrice) IPTU R$ \(iptu)"
+        characteristics.text = "\(size) m² \(bedrooms) quartos \(bathrooms) banheiros \(park) vaga"
+        descriptionAddress.text = "\(address)"
     }
 }

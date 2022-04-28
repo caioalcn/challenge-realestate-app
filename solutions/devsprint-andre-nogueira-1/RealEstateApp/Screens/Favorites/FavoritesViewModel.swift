@@ -7,11 +7,27 @@
 
 import Foundation
 
-class FavoritesViewModel {
+protocol FavoritesViewModelProtocol: AnyObject {
+    var favoriteBind: Bindable<[Favorites]> { get set }
+    func fetchListFavoriteProperty()
+}
+
+final class FavoritesViewModel: FavoritesViewModelProtocol {
+    var favoriteBind: Bindable<[Favorites]> = Bindable([])
+    private let apiClient: RealEstateAPIClientFavoritesProtocol
     
-    weak var delegate: RealEstateAPIClientFavoritesProtocol?
+    init(apiClient: RealEstateAPIClientFavoritesProtocol) {
+        self.apiClient = apiClient
+    }
     
-    init(delegate: RealEstateAPIClientFavoritesProtocol) {
-        self.delegate = delegate
+    func fetchListFavoriteProperty() {
+        apiClient.fetchFavorites { [weak self] response in
+            switch response {
+            case .success(let result):
+                self?.favoriteBind.value = result
+            case .failure(let err):
+                dump(err)
+            }
+        }
     }
 }

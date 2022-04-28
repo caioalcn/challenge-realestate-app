@@ -14,6 +14,8 @@
 		543091792811EB4100BDC903 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543091782811EB4100BDC903 /* UIView+Extensions.swift */; };
 		5430917B2812203300BDC903 /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430917A2812203300BDC903 /* LocalizableString.swift */; };
 		5446FD1128178A1200640269 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5446FD1028178A1200640269 /* Bindable.swift */; };
+		54735EA0281986BF00711445 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54735E9F281986BE00711445 /* FavoriteView.swift */; };
+		54735EA228198EA800711445 /* FavoritesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54735EA128198EA800711445 /* FavoritesFactory.swift */; };
 		548DA1F0280D2819000CFFAC /* PropertyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548DA1EF280D2819000CFFAC /* PropertyDetailsView.swift */; };
 		5498E3B32814CD70002BD1C4 /* PropertyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5498E3B22814CD70002BD1C4 /* PropertyListViewModel.swift */; };
 		5498E3B52814DF14002BD1C4 /* PropertyListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5498E3B42814DF14002BD1C4 /* PropertyListFactory.swift */; };
@@ -70,6 +72,8 @@
 		543091782811EB4100BDC903 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		5430917A2812203300BDC903 /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
 		5446FD1028178A1200640269 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		54735E9F281986BE00711445 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		54735EA128198EA800711445 /* FavoritesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesFactory.swift; sourceTree = "<group>"; };
 		548DA1EF280D2819000CFFAC /* PropertyDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailsView.swift; sourceTree = "<group>"; };
 		5498E3B22814CD70002BD1C4 /* PropertyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListViewModel.swift; sourceTree = "<group>"; };
 		5498E3B42814DF14002BD1C4 /* PropertyListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListFactory.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 			children = (
 				980789CD275E943C00CED39A /* FavoritesViewController.swift */,
 				B0EDEDBF280643F100B1AB1F /* FavoritesViewModel.swift */,
+				54735E9F281986BE00711445 /* FavoriteView.swift */,
+				54735EA128198EA800711445 /* FavoritesFactory.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -485,7 +491,9 @@
 				5446FD1128178A1200640269 /* Bindable.swift in Sources */,
 				980789D9275EA3C900CED39A /* AccountViewController.swift in Sources */,
 				A50AC4082808C25700873216 /* ViewCodable.swift in Sources */,
+				54735EA0281986BF00711445 /* FavoriteView.swift in Sources */,
 				B0D7AA972805F087006177F8 /* TabBarViewController.swift in Sources */,
+				54735EA228198EA800711445 /* FavoritesFactory.swift in Sources */,
 				B0EDEDC828076C4400B1AB1F /* ManagerGetURL.swift in Sources */,
 				B0D7AA922805BBB7006177F8 /* Favorites.swift in Sources */,
 				54C4595728077B57004DD3DF /* LoadingView.swift in Sources */,

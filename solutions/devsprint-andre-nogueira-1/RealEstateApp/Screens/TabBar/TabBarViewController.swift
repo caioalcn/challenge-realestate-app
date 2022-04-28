@@ -22,7 +22,7 @@ private extension UITabBarController{
         self.tabBar.tintColor = .systemBlue
         
         let homeVc = UINavigationController(rootViewController: PropertyListFactory.createPropertyList())
-        let favoritesVc = UINavigationController(rootViewController: FavoritesViewController())
+        let favoritesVc = UINavigationController(rootViewController: FavoritesFactory.createFavorite())
         let accountVc = UINavigationController(rootViewController: AccountFactory.createAccount())
         
         homeVc.tabBarItem.image = UIImage(systemName: "house")
